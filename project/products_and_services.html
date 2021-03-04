@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/Museo Iloilo Logo.png" type="image/png">
+    <title>Products and Services</title>
+</head>
+<body>
+    <!--LOGO AND NAVBAR-->
+    <a href="index.html" id="a-logo"><img src="img/Museo Iloilo Logo.png" alt=""></a>
+    <button type="button" id="togglebtn" class="toggler btn" onclick="toggleSidebar()">
+        <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+    </button>     
+    <nav id="a-nav">
+        <div id="a-menu">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="our_collections.html">Our Collections</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a id="active" href="products_and_services.html">Products and Services</a>
+                </li>
+                <li>
+                    <a href="index.html#bg-footer-main">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#"><img src="img/Museo Iloilo Logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav mt-2 mt-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="our_collections.html">Our Collections</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="active" href="products_and_services.html">Products and Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#bg-footer-main">Contact Us</a>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+    </section>
+    <!--#LOGO AND NAVBAR-->
+    <main id="app">
+        <section id="merchAndServ-header">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col">
+                        <div id="row1">Products</div>
+                        <div id="row2"><span>and</span> Services</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>Payment accepted as cash or check</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tour">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h1>Guided Tours</h1>
+                        <h4>For group of students, foreign and local guests.</h4>
+                        <h4>Monday to Sunday (including holidays) 9:00am to 5:00pm</h4>
+
+                        <h5>Museum Entrance Fee:</h5>
+                        <table>
+                            <tr>
+                                <td>Adult</td>
+                                <td>PhP 50.00</td>
+                            </tr>
+                            <tr>
+                                <td>Senior Citizen</td>
+                                <td>PhP 40.00</td>
+                            </tr>
+                            <tr>
+                                <td>Student</td>
+                                <td>PhP 20.00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="archive">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 col-lg-7">
+                        <img src="img/Isla Gigantes Plates.jpg" alt="">
+                    </div>
+                    <div class="col-xs-12 col-md-7 offset-md-1 col-lg-5 offset-lg-2 description">
+                        <h1>Use Of Archive Section</h1>
+                        <h4>Monday to Sunday (including holidays) 9:00am to 5:00pm</h4>
+                        <table>
+                            <tr>
+                                <td>Use of Archive Section</td>
+                                <td>PhP 50.00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="events">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 offset-md-2 col-lg-5 offset-lg-2">
+                        <h1>Events</h1>
+                            <p>Monthly Art Show</p>
+                            <p>Annual On-the-spot Painting Contest</p>
+                            <p>Summer Art Workshop</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="local">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <img src="img/Archeological Section.jpg" alt="">
+                        <h1>Local Artist's Exhibit</h1>
+                        <div class="description">
+                            <p>Monthly</p>
+                            <p>20% of painting sales</p>
+                        </div>
+                        <h6 id="display-title">Archeological Section</h6>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="bg-footer">
+            <div class="container-fluid">
+            </div>
+        </section>    
+    
+        <div class="footer">
+            <div class="container">
+                <p id="plug-in"><a href="#">Share our website</a> • <a href="#">Give us your feedback or suggestion</a> • <a href="#">Rate our website</a> • <a href="#">Schedule a visit</a> • <a href="#">Watch our video</a> • <a href="#">Sign up for a museum event</a> • <a href="#">Buy museum merchandise</a> • <a href="#">Donate to our museum</a> • <a href="#">Email us for inquiries</a></p>
+                <p id="copyright">Copyright <i class="far fa-copyright text-center"></i> 2020. All rights reserved.</p>
+            </div>
+        </div>
+    </main>
+</body>
+<!--scripts-->
+<script src="script.js"></script>
+<script src="path/to/smooth-scroll.polyfills.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>

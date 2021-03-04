@@ -1,0 +1,3193 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    /*font-family: 'EB Garamond', serif;
+    font-family: 'Poppins', sans-serif;
+    color: #34342d;
+    */
+    scroll-behavior: smooth;
+}
+/*GENERAL*/
+body{
+    background:rgb(249, 245, 239);
+    animation: showUp 1s ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+@keyframes showUp{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+#a-logo {
+    top: 4.778vw;
+    left: 7.25vw;
+    z-index: 50;
+    position: absolute;
+}
+#a-logo > img {
+    width: auto;
+    height: 60px;
+}
+#a-nav {
+    right: 0;
+    top: 3.472vw;
+    z-index: 40;
+    position: absolute;
+    transition: all 300ms ease-in-out;
+}
+#togglebtn{
+    z-index: 40;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    border: 1px solid #1f1f1f;
+    display: none;
+}
+#a-menu ul{
+    border-right: 15px solid #f84421;
+    list-style: none;
+}
+#a-menu li{
+    font-weight: 500;
+    font-size: 15px;
+    font-style: normal;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+    transition: all 0.5s ease;
+    padding-right: 50px;
+}
+#a-menu li a{
+    font-family: 'Poppins', sans-serif;
+    color: #444;
+}
+#a-menu li a:hover, #a-menu #active{
+    color: #d0ab11;
+    text-decoration: none;
+}
+#bg-header-main{
+    width: 100%;
+    position: relative;
+    top: 0;
+    height: 50%;
+}
+#bg-footer-main{
+    max-width: 100%;
+    position: relative;
+    bottom: 50px;
+    padding: 150px 0;
+    margin-top:150px;
+}
+#bg-footer-main > .container{
+    transform: translateY(0);
+}
+#bg-footer > .container-fluid, #bg-footer-main > .container-fluid, #bg-header-main > .container-fluid{
+    background: url(img/pexels-la-miko-3616764.jpg);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:bottom center;
+    background-repeat: no-repeat;
+    -webkit-background-repeat: no-repeat;
+    -webkit-background-size:cover;
+    -webkit-background-position:bottom center;
+    -webkit-background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+#bg-footer > .container-fluid, #bg-footer-main > .container-fluid{
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+#bg-header-main > .container-fluid{
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+#bg-footer{
+    max-width: 100%;
+    position: relative;
+    bottom: 0;
+    height: 30vh;
+}
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background: #333;
+    color: #fff;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    z-index: 100;
+}
+.footer > .container{
+    margin-top: 10px;
+}
+.footer > .container > #copyright{
+    color: #fa7214;
+}
+#plug-in a{
+    color: #fff;
+}
+/*hide scrollbar*/
+#app {
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+#app::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+/*#hide scrollbar*/
+#app{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow-y: scroll;
+    background: rgb(249, 245, 239);
+    color: #1f1f1f;
+    z-index: 1;
+}
+#nav-bar{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 40;
+}
+/* Large devices (desktops, less than 1200px)*/
+@media (max-width: 1200px) {
+    .footer{
+        font-size: 14px;
+        padding: 5px 100px;
+    }
+}
+/* Medium devices (tablets, less than 992px)*/
+@media (max-width: 992px) {
+    #a-menu{
+        padding-right: 0px;
+    }
+    #a-menu li{
+        font-size: 14px;
+    }
+}
+/* Small devices (landscape phones, less than 768px)*/
+@media (max-width: 768px) {
+    #a-menu{
+        padding-right: 0px;
+    }
+    #a-menu li{
+        font-size: 13px;
+    }
+    .footer{
+        font-size: 12px;
+    }
+    #a-nav {
+        right: -230px;
+        top: 8.472vw;
+        z-index: 40;
+        position: fixed;
+    }
+    #a-nav.activate{
+        right: 0px;
+    }
+    #togglebtn{
+        z-index: 40;
+        position: fixed;
+        top: 10px;
+        right: 20px;
+        background: transparent;
+        border: 2px solid #999;
+        display:inline;
+    }
+    #a-logo {
+        top: 10px;
+        left: 20px;
+        z-index: 50;
+        position: absolute;
+    }
+    #bg-footer{
+        max-width: 100%;
+        position: relative;
+        bottom: 0;
+        height: 20vh;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 576px) {
+    #a-logo, #a-nav, #togglebtn{
+        display: none;
+    }
+    #nav-bar{
+        display: inline-block;
+        width: 100%;
+    }
+    #nav-bar img{
+        width: 50px;
+        height: 50px;
+    }
+    #nav-bar ul li a{
+        text-align: center;
+    }
+    #nav-bar ul #active{
+        color: #d0ab11;
+    }
+    .footer{
+        font-size: 10px;
+        padding: 5px 0px;
+    }
+    #bg-footer{
+        max-width: 100%;
+        position: relative;
+        bottom: 0;
+        height: 10%;
+    }
+
+}
+/*#GENERAL*/
+
+/*HOME PAGE*/
+#bg-header-main > .container{
+    padding-top: 250px;
+}
+#bg-header-main > .container h1{
+    font-size: 150px;
+    font-family: 'EB Garamond', serif;
+    text-transform: uppercase;
+    color: #d0ab11;
+}
+#bg-header-main > .container h4{
+    font-size: 31px;
+    font-family: 'Poppins', sans-serif;
+    word-spacing: 1.5;
+}
+#strokeImgTop > .container-fluid{
+    background: url(img/Untitled_Artwork.png);
+    max-width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+
+}
+#museumImgBox > .container-fluid{
+    background: url(img/museo-iloilo1.jpg);
+    max-width: 100%;
+    height: 750px;
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+
+}
+#ourStory{
+    background: #34342d;
+    color: #fff;
+    padding: 100px 0 100px 0;
+}
+#ourStory > .container > .row h1{
+    font-size: 60px;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 50px;
+    color: #d0ab11;
+}
+#ourStory > .container > .row h1::after{
+    content: '';
+    position: absolute;
+    left: 225px;
+    bottom: 45px;
+    height: 3px;
+    width: 250px;
+    background: #d0ab11;
+    opacity: 0.7;
+}
+.imgBox > img{
+    object-fit: cover;
+    background: #fff;
+    width: 500px;
+    height: 500px;
+}
+#ourStoryInfo{
+    font-family: 'Poppins', sans-serif;
+    padding-top: 25%;
+    color: #fff;
+    text-align: justify;
+}
+#strokeImgBottom > .container-fluid{
+    transform: rotate(180deg);
+    background: url(img/Stroke.png);
+    max-width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+
+}
+#mainDisplay{
+    color: #fff;
+    margin-top: -200px;
+}
+.firstImg > img{
+    width: 100%;
+    height: 475px;
+    object-fit: cover;
+}
+.secondImg > img{
+    object-fit: contain;
+    position: absolute;
+    bottom: 0;
+    right: -80px;
+    width: 500px;
+    height: 300px;
+    transform: translateY(100px);
+}
+#mainDisplay p{
+    transform: rotate(-90deg);
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+.firstImg p{
+    position: absolute;
+    top: 165px;
+    right:-115px;
+}
+.secondImg p{
+    position: absolute;
+    top: 415px;
+    right:-210px;
+}
+#cmsOverview{
+    padding-top: 200px;
+}
+.cmsOverview-img > img {   
+    width: 100%;
+    height: 75vh;
+    transform: translateX(-14px);
+    object-fit: fill;
+}
+#cmsOverview-title > h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    padding-top: 200px;
+}
+#cmsOverview-title > h1::after{
+    content: '';
+    position: absolute;
+    left: 225px;
+    bottom: 0;
+    height: 3px;
+    width: 275px;
+    background: #d0ab11;
+    opacity: 0.7;
+}
+#cmsOverview-description{
+    font-family: 'Poppins', sans-serif;
+    padding: 80px 300px 0 100px;
+    text-align: justify;
+}
+#cmsOverview-description ul{
+    list-style: disc;
+}
+#whatOurVisitorSaying{
+    padding-top: 100px;
+}
+.whatOurVisitorSaying-img > img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+#whatOurVisitorSaying-title > h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    padding: 125px 100px 0 50px;    
+}
+#whatOurVisitorSaying-title img{
+    position: absolute;
+    top: 100px;
+    right: 160px;
+}
+#whatOurVisitorSaying-description{
+    font-family: 'Poppins', sans-serif;
+    padding: 125px 50px 0 0;
+    text-align: justify;
+}
+.star{
+    padding-top:10px;
+    color: #d0ab11;
+}
+#bg-footer-main > .container h1{
+    color: #d0ab11;
+    text-transform: uppercase;
+    font-family: 'EB Garamond', serif;
+    font-weight: 500;
+    font-size: 100px;
+    word-spacing: 15px;
+    transform: translateX(-100px);
+    margin-bottom: 60px;
+}
+#bg-footer-main > .container h4{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 35px;
+    transform: translateX(-90px);
+    margin-bottom: -25px;
+}
+#info > h6, #openingHours > h6, #address > h6{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+#info > div, #openingHours > div, #address > div{
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
+}
+#info > #a-info{
+    padding-top: 20px;
+}
+#info > #a-info a{
+    font-weight: bold;
+    color: #3b5998;
+    cursor: pointer;
+}
+#info > #a-info a:hover{
+    color: #1f1f1f;
+    font-weight: bold;
+    text-decoration: none;
+}
+#input-email{
+    padding-top: 50px;
+}
+#input-email > .input-group input, #input-email > .input-group span{
+    padding: 15px 20px;
+    background-color: #fff;
+}
+#input-email p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+/* Large devices (desktops, less than 1200px)*/
+@media (max-width: 1200px) {
+    #bg-header-main{
+        height: 35%;
+    }
+    #bg-header-main > .container{
+        padding-top: 175px;
+    }
+    #bg-header-main > .container h1{
+        font-size: 125px;
+        font-family: 'EB Garamond', serif;
+        text-transform: uppercase;
+        color: #d0ab11;
+    }
+    #bg-header-main > .container h4{
+        font-size: 26px;
+        font-family: 'Poppins', sans-serif;
+        word-spacing: 1.5;
+    }
+    #museumImgBox > .container-fluid{
+        background: url(img/museo-iloilo1.jpg);
+        max-width: 100%;
+        height: 500px;
+        background-size: cover;
+        background-position:center;
+        background-repeat: no-repeat;
+    
+    }
+    #ourStory{
+        background: #34342d;
+        color: #fff;
+        padding: 100px 0 25px 0;
+    }
+    .imgBox > img{
+        object-fit: cover;
+        background: #fff;
+        width: 450px;
+        height: 450px;
+    }
+    #ourStoryInfo{
+        font-family: 'Poppins', sans-serif;
+        padding-top: 25%;
+        color: #fff;
+        text-align: justify;
+        font-size: 14px;
+    }
+    #mainDisplay{
+        color: #fff;
+        margin-top: -200px;
+    }
+    .firstImg > img{
+        width: 90%;
+        height: 500px;
+        padding-left: 100px;
+    }
+    .secondImg > img{
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+        width: 400px;
+        height: 250px;
+        transform: translateY(100px);
+    }
+    #mainDisplay p{
+        transform: rotate(-90deg);
+        font-size: 9px;
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+    }
+    .firstImg p{
+        position: absolute;
+        top: 270px;
+        right:-5px;
+    }
+    .secondImg p{
+        position: absolute;
+        top: 470px;
+        right:-95px;
+    }
+    #cmsOverview{
+        padding-top: 150px;
+    }
+    .cmsOverview-img > img {   
+        width: 100%;
+        height: 60vh;
+        transform: translateX(-14px);
+    }
+    #cmsOverview-title > h1 {
+        padding-top: 50px;
+    }
+    #cmsOverview-description{
+        padding: 75px 50px 0 100px;
+    }
+    #whatOurVisitorSaying{
+        padding-top: 50px;
+        padding-bottom: 100px;
+    }
+    .whatOurVisitorSaying-img > img{
+        width: 100%;
+        height: 150px;
+    }
+    #whatOurVisitorSaying-title > h1 {
+        padding: 50px 50px 0 100px;    
+    }
+    #whatOurVisitorSaying-title img{
+        position: absolute;
+        top: 30px;
+        right: 120px;
+    }
+    #whatOurVisitorSaying-description{
+        font-family: 'Poppins', sans-serif;
+        padding: 50px 100px 0 0;
+    }
+    #bg-footer-main{
+        max-width: 100%;
+        position: relative;
+        bottom: 50px;
+        padding: 100px 0;
+        margin-top:100px;
+    }
+    #bg-footer-main > .container{
+        transform: translateY(0);
+    }
+    #bg-footer-main > .container h1{
+        transform: translateX(0px);
+        margin-bottom: 60px;
+    }
+    #bg-footer-main > .container h4{
+        transform: translateX(10px);
+        margin-bottom: -25px;
+    }
+}
+/* Medium devices (tablets, less than 992px)*/
+@media (max-width: 992px) {
+    #bg-header-main{
+        height: 30%;
+    }
+    #strokeImgBottom > .container-fluid,#strokeImgTop > .container-fluid{
+        height: 250px;
+    }
+    #bg-header-main > .container{
+        padding-top: 150px;
+    }
+    #bg-header-main > .container h1{
+        font-size: 100px;
+        font-family: 'EB Garamond', serif;
+        text-transform: uppercase;
+        color: #d0ab11;
+    }
+    #bg-header-main > .container h4{
+        font-size: 21px;
+        font-family: 'Poppins', sans-serif;
+        word-spacing: 1.5;
+    }
+    #museumImgBox > .container-fluid{
+        background: url(img/museo-iloilo1.jpg);
+        max-width: 100%;
+        height: 400px;
+        background-size: cover;
+        background-position:center;
+        background-repeat: no-repeat;
+    
+    }
+    #ourStory{
+        padding: 50px 0 25px 0;
+    }
+    #ourStory > .container > .row > .col-12 > h1{
+        font-size: 40px;
+        padding-bottom: 50px;
+    }
+    .imgBox > img{
+        background: #fff;
+        width: 400px;
+        height: 400px;
+    }
+    #ourStoryInfo{
+        display: flex;
+        padding-top: 15%;
+        font-size: 14px;
+        color: #fff;
+    }
+    #ourStory > .container > .row h1::after{
+        content: '';
+        position: absolute;
+        left: 175px;
+        bottom: 45px;
+        height: 3px;
+        width: 200px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    .firstImg > img{
+        width: 80%;
+        height: 350px;
+        object-fit: cover;
+    }
+    .secondImg > img{
+        object-fit: contain;
+        position: absolute;
+        bottom: 0;
+        right: 50px;
+        width: 350px;
+        height: 200px;
+        transform: translateY(100px);
+    }
+    #mainDisplay{
+        margin-top: -100px;
+    }
+    #mainDisplay p{
+        transform: rotate(-90deg);
+        font-size: 8px;
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+    }
+    .firstImg p{
+        position: absolute;
+        top: 160px;
+        right:75px;
+    }
+    .secondImg p{
+        position: absolute;
+        top: 345px;
+        right:-40px;
+    }
+    #cmsOverview-title > h1 {
+        font-size: 35px;
+    }
+    .cmsOverview-img > img {   
+        width: 100%;
+        height: 50vh;
+        transform: translateX(-14px);
+    }
+    #cmsOverview-description{
+        font-size: 14px;
+        text-align: justify;
+    }
+    #whatOurVisitorSaying-title > h1 {
+        font-size: 35px;
+    }
+    #cmsOverview-title > h1::after{
+        content: '';
+        position: absolute;
+        left: 210px;
+        bottom: 0;
+        height: 3px;
+        width: 200px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    #whatOurVisitorSaying-description{
+       font-size: 14px;
+    }
+    #whatOurVisitorSaying-title img{
+        position: absolute;
+        top: 40px;
+        right: 50px;
+    }
+    #bg-footer-main{
+        max-width: 100%;
+        position: relative;
+        bottom: 50px;
+        padding: 75px 0;
+        margin-top:75px;
+    }
+    #bg-footer-main > .container{
+        transform: translateY(0);
+    }
+    #bg-footer-main > .container h1{
+        font-size: 90px;
+    }
+    #bg-footer-main > .container h4{
+       font-size: 25px;
+    }
+    #info > h6, #openingHours > h6, #address > h6, #info > div, #openingHours > div, #address > div{
+        font-size: 14px;
+    }
+    #input-email p{
+        font-size: 12px;
+    }
+}
+/* Small devices (landscape phones, less than 768px)*/
+@media (max-width: 768px) {
+    #bg-header-main{
+        height: 25%;
+    }
+    #strokeImgBottom > .container-fluid,#strokeImgTop > .container-fluid{
+        height: 200px;
+    }
+    #bg-header-main > .container{
+        padding-top: 125px;
+    }
+    #bg-header-main > .container h1{
+        font-size: 75px;
+        font-family: 'EB Garamond', serif;
+        text-transform: uppercase;
+        color: #d0ab11;
+    }
+    #bg-header-main > .container h4{
+        font-size: 16px;
+        font-family: 'Poppins', sans-serif;
+        word-spacing: 1.5;
+    }
+    #museumImgBox > .container-fluid{
+        background: url(img/museo-iloilo1.jpg);
+        max-width: 100%;
+        height: 300px;
+        background-size: cover;
+        background-position:center;
+        background-repeat: no-repeat;
+    
+    }
+    #ourStory{
+        background: #34342d;
+        color: #fff;
+        padding-top: 50px;
+        padding-bottom: 25px;
+    }
+    #ourStory > .container > .row > .col-12 > h1{
+        font-size: 40px;
+        font-family: 'Poppins', sans-serif;
+        padding-bottom: 50px;
+    }
+    #ourStory > .container > .row h1::after{
+        content: '';
+        position: absolute;
+        left: 100px;
+        bottom: 45px;
+        height: 3px;
+        width: 150px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    .imgBox > img{
+        background: #fff;
+        width: 250px;
+        height: 250px;
+    }
+    #ourStoryInfo{
+        display: flex;
+        font-size: 0.8em;
+        padding: 10px 20px 0 20px;
+        color: #fff;
+    }
+    .firstImg > img{
+        height: 300px;
+    }
+    .secondImg > img{
+        right: 0;
+        width: 250px;
+        height: 150px;
+        transform: translateY(50px);
+    }
+    .firstImg p{
+        position: absolute;
+        top: 120px;
+        right:60px;
+    }
+    #mainDisplay .secondImg p{
+        transform: rotate(0deg);
+    }
+    .secondImg p{
+        position: absolute;
+        bottom: 0px;
+        right:0px;
+    }
+    #cmsOverview{
+        padding-top: 100px;
+    }
+    .cmsOverview-img > img {   
+        width: 100%;
+        height: 36vh;
+        transform: translateX(-14px);
+    }
+    #cmsOverview-title > h1 {
+        font-size: 30px;
+    }
+    #cmsOverview-title > h1::after{
+        content: '';
+        position: absolute;
+        left: 110px;
+        bottom: 0;
+        height: 3px;
+        width: 200px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    #cmsOverview-description{
+        font-size: 12px;
+        text-align: justify;
+        padding: 25px 50px 0 50px;
+    }
+    #whatOurVisitorSaying{
+        padding-top: 50px;
+    }
+    #whatOurVisitorSaying-title > h1 {
+        font-size: 30px;
+        padding-top: 50px;
+    }
+    #whatOurVisitorSaying-title img{
+        position: absolute;
+        top: 40px;
+        right:40px;
+    }
+    #whatOurVisitorSaying-description{
+       font-size: 12px;
+       padding-top: 50px;
+    }
+    #bg-footer-main{
+        max-width: 100%;
+        position: relative;
+        bottom: 50px;
+        padding: 50px 0;
+        margin-top:50px;
+    }
+    #bg-footer-main > .container{
+        transform: translateY(0);
+    }
+    #bg-footer-main > .container h1{
+        font-size: 75px;
+    }
+    #bg-footer-main > .container h4{
+       font-size: 20px;
+    }
+    #info > h6, #openingHours > h6, #address > h6, #info > div, #openingHours > div, #address > div{
+        font-size: 12px;
+    }
+    #input-email p{
+        font-size: 11px;
+    }
+}
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 576px) {
+    #bg-header-main{
+        height: 30%;
+    }
+    #bg-header-main > .container h1{
+        font-size: 40px;
+        font-family: 'EB Garamond', serif;
+        text-transform: uppercase;
+        color: #d0ab11;
+    }
+    #bg-header-main > .container h4{
+        font-size: 8px;
+        font-family: 'Poppins', sans-serif;
+    }
+    #strokeImgBottom > .container-fluid,#strokeImgTop > .container-fluid{
+        height: 100px;
+    }
+    #museumImgBox > .container-fluid{
+        background: url(img/museo-iloilo1.jpg);
+        max-width: 100%;
+        height: 150px;
+        background-size: cover;
+        background-position:center;
+        background-repeat: no-repeat;
+    }
+    #ourStory{
+        background: #34342d;
+        color: #fff;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    #ourStory > .container > .row > .col-12 > h1{
+        font-size: 25px;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        padding-bottom: 25px;
+    }
+    #ourStory > .container > .row h1::after{
+        content: '';
+        position: absolute;
+        left: 100px;
+        bottom: 25px;
+        height: 2px;
+        width: 180px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    .imgBox > img{
+        background: #fff;
+        width: 100%;
+        height: 200px;
+    }
+    #ourStoryInfo{
+        display: flex;
+        font-size: 0.5em;
+        padding: 10px 10px 0 10px;
+        color: #fff;
+    }
+    #mainDisplay{
+        margin-top: -50px;
+    }
+    .firstImg > img{
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+        transform: translateX(-100px);
+    }
+    .secondImg > img{
+        object-fit: contain;
+        position: absolute;
+        bottom: 0;
+        right: 50px;
+        width: 150px;
+        height: 150px;
+        transform: translateY(50px);
+    }
+    .firstImg p{
+        display: none;
+    }
+    #mainDisplay .secondImg p{
+        transform: rotate(0deg);
+    }
+    .secondImg p{
+        position: absolute;
+        top: 0;
+        left: 25%;
+    }
+    #cmsOverview{
+        padding-top: 50px;
+    }
+    .cmsOverview-img > img {   
+        width: 100%;
+        height: 100%;
+        transform: translateX(0px);
+    }
+    #cmsOverview-title > h1 {
+        font-size: 25px;
+        text-align: center;
+    }
+    #cmsOverview-title > h1::after{
+        content: '';
+        position: absolute;
+        left: 100px;
+        bottom: 0;
+        height: 2px;
+        width: 200px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    #cmsOverview-description{
+        font-size: 0.5em;
+        text-align: justify;
+        padding: 25px 50px 0 50px;
+    }
+    #whatOurVisitorSaying{
+        padding-top: 25px;
+    }
+    .whatOurVisitorSaying-img > img{
+        width: 100%;
+        height: 50px;
+        object-fit: cover;
+    }
+    #whatOurVisitorSaying-title > h1 {
+        font-size: 25px;
+        text-align: center;
+        padding: 25px 0px 0 0px;  
+    }
+    #whatOurVisitorSaying-title img{
+        position: absolute;
+        top: 25px;
+        right:100px;
+        width: 75px;
+        height: 75px;
+    }
+    #whatOurVisitorSaying-description{
+       font-size: 0.5em;
+       text-align: justify;
+       padding: 0px 20px 0 20px;
+    }
+    #bg-footer-main{
+        height: 65%;
+    }
+    #bg-footer-main > .container{
+        transform: translateY(-50px);
+    }
+    #bg-footer-main > .container h1{
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+    #bg-footer-main > .container h4{
+       font-size: 15px;
+       margin-bottom: 0px;
+    }
+    #info > h6, #openingHours > h6, #address > h6, #info > div, #openingHours > div, #address > div{
+        font-size: 0.7em;
+    }
+    #input-email p{
+        font-size: 0.6em;
+        text-align: center;
+    }
+    #info, #openingHours, #address{
+        padding-top: 10px;
+    }
+    #info > #a-info{
+        padding-top: 5px;
+    }
+}
+/*#HOME PAGE*/
+
+/*OUR COLLECTION PAGE*/
+#ourCollections{
+    padding-top: 250px;
+}
+#ourCollections > .container h1{
+    font-size: 120px;
+    font-family: 'EB Garamond', serif;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+#ourCollections > .container h4{
+    font-size: 75px;
+    font-family: 'EB Garamond', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5;
+    margin-bottom: -30px;
+}
+#ourCollections > .container p{
+    float: right;
+    text-align: right;
+    font-family: 'Poppins', sans-serif;
+    padding: 0 0 0 100px;
+}
+#ourCollections > .container p span, 
+#arch-section > .container p span, 
+#weav-section > .container-fluid p span,
+#worldwar2-section > .container p span,
+#religious-section > .container-fluid p span,
+#cultural-section > .container p span{
+    color: #d0ab11;
+    font-weight: bold;
+}
+#arch-section{
+    padding-top: 150px;
+}
+#arch-section > .container img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+#arch-section > .container p{
+    padding: 50px 150px 0 0;
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+}
+#arch-section > .container h6{
+    position: absolute;
+    bottom: 75px;
+    left: -80px;
+}
+#display-title{
+    transform: rotate(-90deg);
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+}
+#weav-section{
+    padding-top: 150px;
+}
+#weav-section > .container-fluid img{
+    width: 100%;
+    height: 500px;
+    transform: translateX(-14px);
+}
+#weav-section > .container-fluid h6{
+    position: absolute;
+    bottom: 55px;
+    right: -50px;
+}
+#weav-section > .container-fluid p{
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+    text-align-last: right;
+    padding-top: 100px;
+}
+#weav-description{
+    padding-right: 100px;
+}
+#worldwar2-section{
+    padding-top: 150px;
+}
+#worldwar2-section > .container p {
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+}
+#worldwar2-section > .container img{
+    padding-top: 100px;
+    width: 100%;
+    height: 1000px;
+    object-fit: contain;
+}
+#worldwar2-section > .container h6{
+    position: absolute;
+    bottom: 60px;
+    right: 140px;
+}
+#religious-section{
+    padding-top: 150px;
+}
+#religious-section > .container-fluid img{
+    width: 100%;
+    height: 750px;
+    transform: translateX(14px);
+    object-fit: fill;
+}
+#religious-section > .container-fluid h6{
+    position: absolute;
+    bottom:125px;
+    left: -125px;
+}
+#religious-section > .container-fluid p{
+    font-family: 'Poppins', sans-serif;
+    padding-top: 100px;
+    text-align: justify;
+}
+#cultural-section{
+    padding-top: 150px;
+}
+#cultural-section > .container p{
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+}
+#cultural-section > .container .cultural-firstImg img{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+#cultural-section > .container h6{
+    position: absolute;
+    bottom: 55px;
+    right: -20px;
+}
+#cultural-section > .container .cultural-secondImg img{
+    padding-top: 200px;
+    width: 800px;
+    height: 1000px;
+}
+#cultural-section > .container .cultural-secondImg h6{
+    position: absolute;
+    bottom: 65px;
+    right: 230px;
+}
+#cultural-description{
+    padding-top: 350px;
+}
+@media (max-width: 1200px) {
+    #ourCollections{
+        padding-top: 150px;
+    }
+    #ourCollections > .container h1{
+        font-size: 90px;
+    }
+    #ourCollections > .container h4{
+        font-size: 55px;
+    }
+    #ourCollections > .container p{
+        font-size: 14px;
+        padding: 0 100px 0 25px;
+    }
+    #arch-section{
+        padding-top: 100px;
+    }
+    #arch-section > .container p{
+        padding: 100px 150px 0 0;
+        font-size: 14px;
+    }
+    #weav-section{
+        padding-top: 100px;
+    }
+    #weav-section > .container-fluid p{
+        font-size: 14px;
+        padding-top: 50px;
+    }
+    #weav-description{
+        padding-right: 50px;
+    }
+    #worldwar2-section{
+        padding-top: 100px;
+    }
+    #worldwar2-section > .container p {
+        font-size: 14px;
+    }
+    #worldwar2-section > .container img{
+        padding-top: 80px;
+    }
+    #worldwar2-section > .container h6{
+        position: absolute;
+        bottom: 60px;
+        right: 130px;
+    }
+    #religious-section{
+        padding-top: 100px;
+    }
+    #religious-section > .container-fluid img{
+        width: 100%;
+        height: 550px;
+        transform: translateX(14px);
+        object-fit: 50%;
+    }
+    #religious-section > .container-fluid p{
+        font-size: 14px;
+        padding-top: 50px;
+    }
+    #cultural-section{
+        padding-top: 100px;
+    }
+    #cultural-section > .container p{
+        font-size: 14px;
+    }
+    #cultural-section > .container h6{
+        position: absolute;
+        bottom: 45px;
+        right: -20px;
+    }
+}
+/* Medium devices (tablets, less than 992px)*/
+@media (max-width: 992px) {
+    #ourCollections{
+        padding-top: 125px;
+    }
+    #ourCollections > .container h1{
+        font-size: 75px;
+    }
+    #ourCollections > .container h4{
+        font-size: 45px;
+    }
+    #ourCollections > .container p{
+        font-size: 13px;
+        padding: 0 75px 0 0;
+    }
+    #arch-section{
+        padding-top: 75px;
+    }
+    #arch-section > .container p{
+        padding: 100px 100px 0 0;
+        font-size: 13px;
+    }
+    #weav-section{
+        padding-top: 75px;
+    }
+    #weav-section > .container-fluid p{
+        font-size: 13px;
+        padding-top: 50px;
+    }
+    #weav-description{
+        padding-right: 15px;
+    }
+    #worldwar2-section{
+        padding-top: 75px;
+    }
+    #worldwar2-section > .container p {
+        font-size: 13px;
+    }
+    #worldwar2-section > .container img{
+        padding-top: 100px;
+        width: 100%;
+        height: 800px;
+        object-fit: contain;
+    }
+    #worldwar2-section > .container h6{
+        position: absolute;
+        bottom: 50px;
+        right: 150px;
+        padding-top: 50px;
+    }
+    #religious-section{
+        padding-top: 75px;
+    }
+    #religious-section > .container-fluid p{
+        font-size: 14px;
+        padding-top: 50px;
+    }
+    #religious-section > .container-fluid img{
+        width: 100%;
+        height: 450px;
+        transform: translateX(14px);
+        object-fit: 50%;
+    }
+    #religious-section > .container-fluid h6{
+        position: absolute;
+        bottom:125px;
+        left: -120px;
+    }
+    #cultural-section{
+        padding-top: 75px;
+    }
+    #cultural-section > .container p{
+        font-size: 14px;
+    }
+    #cultural-description{
+        padding-top: 275px;
+    }
+    #cultural-section > .container .cultural-firstImg img{
+        width: 425px;
+        height: 425px;
+    }
+    #cultural-section > .container .cultural-secondImg img{
+        padding-top: 100px;
+        width: 600px;
+        height: 800px;
+    }
+    #cultural-section > .container h6{
+        position: absolute;
+        bottom: 45px;
+        right: -30px;
+    }
+    #cultural-section > .container .cultural-secondImg h6{
+        position: absolute;
+        bottom: 65px;
+        right: 250px;
+    }
+}
+/* Small devices (landscape phones, less than 768px)*/
+@media (max-width: 768px) {
+    #ourCollections > .container h1{
+        font-size: 55px;
+    }
+    #ourCollections > .container h4{
+        font-size: 35px;
+        margin-bottom: -20px;
+    }
+    #ourCollections > .container p{
+        font-size: 13px;
+        padding: 0 0 0 50px;
+    }
+    #arch-section{
+        padding-top: 80px;
+    }
+    #arch-section > .container img{
+        width: 100%;
+        height: 400px;
+    }
+    #arch-section > .container p{
+        padding: 0 25px 0 0;
+        font-size: 13px;
+    }
+    #arch-section > .container h6{
+        font-size: 13px;
+        position: absolute;
+        bottom: 70px;
+        left: -70px;
+    }
+    #weav-section{
+        padding-top: 80px;
+    }
+    #weav-section > .container-fluid img{
+        width: 100%;
+        height: 500px;
+        transform: translateX(-14px);
+    }
+    #weav-section > .container-fluid h6{
+        font-size: 13px;
+        position: absolute;
+        bottom: 50px;
+        right: -45px;
+    }
+    #weav-section > .container-fluid p{
+        font-size: 13px;
+        padding-top: 50px;
+    }
+    #weav-description{
+        padding-right: 100px;
+
+    }
+    #worldwar2-section{
+        padding-top: 80px;
+    }
+    #worldwar2-section > .container p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 13px;
+    }
+    #worldwar2-section > .container img{
+        padding-top: 100px;
+        width: 100%;
+        height: 600px;
+        object-fit: contain;
+    }
+    #worldwar2-section > .container h6{
+        position: absolute;
+        bottom: 40px;
+        right: 115px;
+        padding-top: 50px;
+    }
+    #religious-section{
+        padding-top: 80px;
+    }
+    #religious-section > .container-fluid img{
+        width: 100%;
+        height: 400px;
+        transform: translateX(14px);
+        object-fit: 50%;
+    }
+    #religious-section > .container-fluid h6{
+        font-size: 12px;
+        position: absolute;
+        bottom: 110px;
+        left: -105px;
+    }
+    #religious-section > .container-fluid p{
+        font-size: 13px;
+        font-family: 'Poppins', sans-serif;
+        padding-top: 50px;
+    }
+    #cultural-section{
+        padding-top: 80px;
+    }
+    #cultural-section > .container p{
+        font-size: 13px;
+    }
+    #cultural-section > .container .cultural-firstImg img{
+        width: 325px;
+        height: 425px;
+    }
+    #cultural-section > .container h6{
+        font-size: 13px;
+        position: absolute;
+        bottom: 40px;
+        right: -45px;
+    }
+    #cultural-section > .container .cultural-secondImg img{
+        padding-top: 100px;
+        width: 500px;
+        height: 600px;
+    }
+    #cultural-section > .container .cultural-secondImg h6{
+        position: absolute;
+        bottom: 60px;
+        right: 120px;
+    }
+    #cultural-description{
+        padding-top: 250px;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 576px) {
+    #ourCollections > .container h1{
+        font-size: 40px;
+        font-family: 'EB Garamond', serif;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+    #ourCollections > .container h4{
+        font-size: 20px;
+        font-family: 'EB Garamond', serif;
+        text-transform: uppercase;
+        letter-spacing: 0.5;
+        margin-bottom: -10px;
+    }
+    #ourCollections > .container p{
+        float: right;
+        text-align: justify;
+        text-align-last: right;
+        font-family: 'Poppins', sans-serif;
+        padding: 0 0 0 200px;
+        font-size: 0.5em;
+    }
+    #arch-section{
+        padding-top: 50px;
+    }
+    #arch-section > .container h6{
+        font-size: 10px;
+        transform: rotate(0deg);
+        position: relative;
+        top: 0;
+        left: 10px;
+    }
+    #weav-section{
+        padding-top: 25px;
+    }
+    #weav-section > .container-fluid img{
+        width: 100%;
+        height: 200px;
+        transform: translateX(0px);
+    }
+    #weav-section > .container-fluid h6{
+        font-size: 10px;
+        transform: rotate(0deg);
+        position: relative;
+        bottom: 0px;
+        left: 10px;
+    }
+    #weav-section > .container-fluid p{
+        font-size: 13px;
+        padding-top: 25px;
+    }
+    #weav-description{
+        text-align: justify;
+        text-align-last: left;
+        padding-right: 20px;
+    }
+    #worldwar2-section{
+        padding-top: 25px;
+    }
+    #worldwar2-section > .container img{
+        padding-top: 0px;
+        width: 100%;
+        height: 300px;
+        object-fit: contain;
+    }
+    #worldwar2-section > .container h6{
+        transform: rotate(0deg);
+        position: relative;
+        bottom: 40px;
+        right: 5px;
+        font-size: 10px;
+    }
+    #religious-section{
+        padding-top: 25px;
+    }
+    #religious-section > .container-fluid img{
+        width: 100%;
+        height: 200px;
+        transform: translateX(0px);
+        object-fit: 50%;
+    }
+    #religious-section > .container-fluid h6{
+        font-size: 10px;
+        transform: rotate(0deg);
+        position: relative;
+        bottom: 0px;
+        left: 10px;
+    }
+    #religious-section > .container-fluid p{
+        font-size: 13px;
+        font-family: 'Poppins', sans-serif;
+        padding-top: 25px;
+    }
+    #cultural-section{
+        padding-top: 25px;
+    }
+    #cultural-description{
+        padding-top: 0px;
+    }
+    #cultural-section > .container .cultural-firstImg img{
+        width: 100%;
+        height: 225px;
+    }
+    #cultural-section > .container h6{
+        font-size: 10px;
+        transform: rotate(0deg);
+        position: relative;
+        bottom: 0px;
+        left: 10px;
+    }
+    #cultural-section > .container .cultural-secondImg img{
+        padding-top: 50px;
+        width: 100%;
+        height: 300px;
+        object-fit: contain;
+    }
+    #cultural-section > .container .cultural-secondImg h6{
+        font-size: 10px;
+        transform: rotate(0deg);
+        position: relative;
+        bottom: 0px;
+        left: 120px;
+    }
+}
+
+/*#OUR COLLECTION PAGE*/
+
+/*ABOUT PAGE*/
+#about-header{
+    padding-top: 250px;
+}
+#about-header > .container h1{
+    font-size: 175px;
+    text-transform: uppercase;
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    color: #34342d;
+    text-align: center;
+}
+#about-header > .container h4{
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    color: #34342d;
+    margin: -30px 0 0 220px;
+    text-align: center;
+}
+#about-header > .container img{
+    position: absolute;
+    top: -250px;
+    left: 40px;
+    width: 400px;
+    height: 500px;
+    z-index: -1;
+}
+#about-header > .container p{
+    font-size: 15px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 40px;
+}
+#building{
+    padding-top: 200px;
+}
+.building-img{
+    transform: translateX(-14px);
+}
+.building-img img{
+    width: 100%;
+    height: 100vh;
+    object-fit: fill;
+}
+#building-title > h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    padding: 0 0 0 75px;
+    color: #34342d;
+}
+#building-title > h1::after{
+    content: '';
+    position: absolute;
+    left: 300px;
+    bottom: 0;
+    height: 3px;
+    width: 225px;
+    background: #d0ab11;
+    opacity: 0.7;
+}
+#building-description{
+    font-family: 'Poppins', sans-serif;
+    padding: 80px 0 0 125px;
+    text-align: justify;
+}
+.year{
+    display: inline-block;
+    font-family: 'EB Garamond', serif;
+    color: #d0ab11;
+}
+.year > #firstletter, .year > #secondletter{
+    font-size: 125px;
+    position: relative;
+    top: 0;
+}
+.year > #firstnumber, .year > #secondnumber{
+    font-size: 175px;
+    position: relative;
+    top: 25px;
+}
+#exhibit{
+    padding-top: 200px;
+}
+#exhibit img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+#exhibit-title > h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    padding: 200px 0 0 0;
+    color: #34342d;
+}
+#exhibit-title > h1::after{
+    content: '';
+    position: absolute;
+    left: 200px;
+    bottom: 0;
+    height: 3px;
+    width: 275px;
+    background: #d0ab11;
+    opacity: 0.7;
+}
+#exhibit-description{
+    font-family: 'Poppins', sans-serif;
+    padding: 80px 100px 0 0;
+    font-size: 15px;
+    text-align: justify;
+}
+#exhibitExtend{
+    padding-top: 200px;
+}
+#exhibitExtend .parallax-first-img{
+    background-image: url("img/Weaving\ Section.jpg");
+
+    /* Set a specific height */
+    width: 100%;
+    min-height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#exhibitExtend p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    border-left: 15px solid #34342d;
+    padding-left: 10px;
+    text-align: justify;
+}
+#exhibitExtend .parallax-second-img{
+    margin-top: -200px;
+    background-image: url("img/World\ War\ 2\ Weapons.jpg");
+    /* Set a specific height */
+    width: 100%;
+    height: 600px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#biography{
+    padding-top: 150px;
+}
+#biography h1{
+    color: #d0ab11;
+    font-size: 75px;
+    font-family: 'EB Garamond', serif;
+}
+#biography p{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+    border-left: 15px solid #34342d;
+    padding-left: 10px;
+}
+@media (max-width: 1200px) {
+    #about-header{
+        padding-top: 150px;
+    }
+    #about-header > .container h1{
+        font-size: 150px;
+        text-transform: uppercase;
+        font-family: 'EB Garamond', serif;
+        font-weight: 600;
+        color: #34342d;
+        text-align: center;
+    }
+    #about-header > .container h4{
+        font-size: 30px;
+        font-family: 'Poppins', sans-serif;
+        color: #34342d;
+        margin: -30px 0 0 220px;
+        text-align: center;
+    }
+    #about-header > .container img{
+        position: absolute;
+        top: -150px;
+        left: 175px;
+        width: 325px;
+        height: 375px;
+        z-index: -1;
+    }
+    #about-header > .container p{
+        font-size: 14px;
+        padding: 50px 0 0 150px;
+    }
+    #building{
+        padding-top: 100px;
+    }
+    .building-img{
+        transform: translateX(-14px);
+    }
+    .building-img img{
+        width: 100%;
+        height: 75vh;
+        object-fit: fill;
+    }
+    #building-title > h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 40px;
+        padding: 0 0 0 30px;
+        color: #34342d;
+    }
+    #building-title > h1::after{
+        content: '';
+        position: absolute;
+        left: 250px;
+        bottom: 0;
+        height: 3px;
+        width: 200px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    #building-description{
+        font-family: 'Poppins', sans-serif;
+        padding: 50px 0 0 60px;
+        font-size: 14px;
+    }
+    .year > #firstletter, .year > #secondletter{
+        font-size: 100px;
+        position: relative;
+        top: 0;
+    }
+    .year > #firstnumber, .year > #secondnumber{
+        font-size: 150px;
+        position: relative;
+        top: 25px;
+    }
+    #exhibit{
+        padding-top: 100px;
+    }
+    #exhibit-title > h1::after{
+        content: '';
+        position: absolute;
+        left: 200px;
+        bottom: 0;
+        height: 3px;
+        width: 250px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    #exhibitExtend{
+        padding-top: 100px;
+    }
+    #exhibitExtend .parallax-first-img{
+        background-image: url("img/Weaving\ Section.jpg");
+    
+        /* Set a specific height */
+        width: 100%;
+        min-height: 450px; 
+      
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: 75%;
+    }
+    #exhibitExtend p{
+        font-size: 14px;
+    }
+    #exhibitExtend .parallax-second-img{
+        margin-top: -200px;
+        background-image: url("img/World\ War\ 2\ Weapons.jpg");
+        /* Set a specific height */
+        width: 100%;
+        height: 500px; 
+      
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: 50%;
+    }
+    #biography{
+        padding-top: 100px;
+    }
+    #biography h1{
+        color: #d0ab11;
+        font-size: 65px;
+        font-family: 'EB Garamond', serif;
+    }
+    #biography p{
+        font-size: 14px;
+        font-family: 'Poppins', sans-serif;
+        text-align: left;
+        border-left: 15px solid #34342d;
+        padding-left: 10px;
+    }
+}
+/* Medium devices (tablets, less than 992px)*/
+@media (max-width: 992px) {
+    #about-header{
+        padding-top: 125px;
+    }
+    #about-header > .container h1{
+        font-size: 125px;
+        text-transform: uppercase;
+        font-family: 'EB Garamond', serif;
+        font-weight: 600;
+        color: #34342d;
+        text-align: center;
+    }
+    #about-header > .container h4{
+        font-size: 25px;
+        font-family: 'Poppins', sans-serif;
+        color: #34342d;
+        margin: -30px 0 0 220px;
+        text-align: center;
+    }
+    #about-header > .container img{
+        position: absolute;
+        top: -125px;
+        left: 160px;
+        width: 275px;
+        height: 325px;
+        z-index: -1;
+    }
+    #about-header > .container p{
+        font-size: 13px;
+        padding: 50px 25px 0 110px;
+    }
+    #building{
+        padding-top: 75px;
+    }
+    .building-img{
+        transform: translateX(-14px);
+    }
+    .building-img img{
+        width: 100%;
+        height: 75vh;
+        object-fit: fill;
+    }
+    #building-title > h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 35px;
+        padding: 0 0 0 30px;
+        color: #34342d;
+    }
+    #building-title > h1::after{
+        content: '';
+        position: absolute;
+        left: 225px;
+        bottom: 0;
+        height: 3px;
+        width: 200px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    #building-description{
+        font-family: 'Poppins', sans-serif;
+        padding: 50px 0 0 50px;
+        font-size: 13px;
+    }
+    .year > #firstletter, .year > #secondletter{
+        font-size: 80px;
+        position: relative;
+        top: 0;
+    }
+    .year > #firstnumber, .year > #secondnumber{
+        font-size: 130px;
+        position: relative;
+        top: 25px;
+    }
+    #exhibit{
+        padding-top: 75px;
+    }
+    #exhibit img{
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    #exhibit-title > h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 35px;
+        padding: 125px 0 0 0;
+        color: #34342d;
+    }
+    #exhibit-title > h1::after{
+        content: '';
+        position: absolute;
+        left: 150px;
+        bottom: 0;
+        height: 3px;
+        width: 200px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    #exhibit-description{
+        font-family: 'Poppins', sans-serif;
+        padding: 50px 50px 0 0;
+        font-size: 15px;
+    }
+    #exhibitExtend{
+        padding-top: 75px;
+    }
+    #exhibitExtend .parallax-first-img{
+        background-image: url("img/Weaving\ Section.jpg");
+    
+        /* Set a specific height */
+        width: 100%;
+        min-height: 450px; 
+      
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: 60%;
+    }
+    #exhibitExtend p{
+        font-size: 13px;
+    }
+    #exhibitExtend .parallax-second-img{
+        margin-top: -200px;
+        background-image: url("img/World\ War\ 2\ Weapons.jpg");
+        /* Set a specific height */
+        width: 100%;
+        height: 500px; 
+      
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: 40%;
+    }
+    #biography{
+        padding-top: 75px;
+    }
+    #biography h1{
+        color: #d0ab11;
+        font-size: 55px;
+        font-family: 'EB Garamond', serif;
+    }
+    #biography p{
+        font-size: 13px;
+        font-family: 'Poppins', sans-serif;
+        text-align: left;
+        border-left: 15px solid #34342d;
+        padding-left: 10px;
+    }
+}
+/* Small devices (landscape phones, less than 768px)*/
+@media (max-width: 768px) {
+    #about-header{
+        padding-top: 125px;
+    }
+    #about-header > .container h1{
+        font-size: 100px;
+        text-transform: uppercase;
+        font-family: 'EB Garamond', serif;
+        font-weight: 600;
+        color: #34342d;
+        text-align: center;
+    }
+    #about-header > .container h4{
+        font-size: 20px;
+        font-family: 'Poppins', sans-serif;
+        color: #34342d;
+        margin: -30px 0 0 150px;
+        text-align: center;
+    }
+    #about-header > .container img{
+        position: absolute;
+        top: -125px;
+        left: 100px;
+        width: 210px;
+        height: 250px;
+        z-index: -1;
+    }
+    #about-header > .container p{
+        font-size: 12px;
+        padding: 25px 75px 0 75px;
+    }
+    #building{
+        padding-top: 50px;
+    }
+    .building-img{
+        transform: translateX(-14px);
+    }
+    .building-img img{
+        width: 100%;
+        height: 50vh;
+        object-fit: fill;
+    }
+    #building-title > h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 30px;
+        padding: 0 0 0 30px;
+        color: #34342d;
+    }
+    #building-title > h1::after{
+        content: '';
+        position: absolute;
+        left: 200px;
+        bottom: 0;
+        height: 3px;
+        width: 150px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    #building-description{
+        font-family: 'Poppins', sans-serif;
+        padding: 20px 20px 0 15px;
+        font-size: 12px;
+    }
+    .year > #firstletter, .year > #secondletter{
+        font-size: 60px;
+        position: relative;
+        top: 0;
+    }
+    .year > #firstnumber, .year > #secondnumber{
+        font-size: 100px;
+        position: relative;
+        top: 25px;
+    }
+    #exhibit{
+        padding-top: 50px;
+    }
+    #exhibit-title > h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 30px;
+        padding: 50px 0 0 0;
+        color: #34342d;
+    }
+    #exhibit-title > h1::after{
+        content: '';
+        position: absolute;
+        left: 150px;
+        bottom: 0;
+        height: 3px;
+        width: 150px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    #exhibit-description{
+        font-family: 'Poppins', sans-serif;
+        padding: 20px 25px 0 0;
+        font-size: 12px;
+    }
+    #exhibitExtend{
+        padding-top: 50px;
+    }
+    #exhibitExtend .parallax-first-img{
+        background-image: url("img/Weaving\ Section.jpg");
+    
+        /* Set a specific height */
+        width: 100%;
+        min-height: 450px; 
+      
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: 50%;
+    }
+    #exhibitExtend p{
+        font-size: 12px;
+    }
+    #exhibitExtend .parallax-second-img{
+        margin-top: -200px;
+        background-image: url("img/World\ War\ 2\ Weapons.jpg");
+        /* Set a specific height */
+        width: 100%;
+        height: 400px; 
+      
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: 50%;
+    }
+    #biography{
+        padding-top: 50px;
+    }
+    #biography h1{
+        color: #d0ab11;
+        font-size: 45px;
+        font-family: 'EB Garamond', serif;
+    }
+    #biography p{
+        font-size: 12px;
+        font-family: 'Poppins', sans-serif;
+        text-align: left;
+        border-left: 15px solid #34342d;
+        padding-left: 10px;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 576px) {
+    #about-header > .container h1{
+        font-size: 55px;
+        text-transform: uppercase;
+        font-family: 'EB Garamond', serif;
+        font-weight: 600;
+        color: #34342d;
+        text-align: center;
+    }
+    #about-header > .container h4{
+        font-size: 14px;
+        font-family: 'Poppins', sans-serif;
+        color: #34342d;
+        margin: -20px 0 0 0;
+        padding-left: 20px;
+    }
+    #about-header > .container img{
+        position: absolute;
+        top: -50px;
+        left: 15px;
+        width: 100px;
+        height: 115px;
+        z-index: -1;
+    }
+    #about-header > .container p{
+        font-size: 0.5em;
+        text-align: justify;
+        font-family: 'Poppins', sans-serif;
+        padding: 15px 10px 0 10px;
+    }
+    #building{
+        padding-top: 25px;
+    }
+    .building-img{
+        transform: translateX(0px);
+    }
+    .building-img img{
+        width: 100%;
+        height: 250px;
+        object-fit: contain;
+    }
+    #building-title > h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 25px;
+        padding: 0 0 0 0px;
+        color: #34342d;
+    }
+    #building-title > h1::after{
+        content: '';
+        position: absolute;
+        left: 100px;
+        bottom: 0;
+        height: 3px;
+        width: 150px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    #building-description{
+        font-family: 'Poppins', sans-serif;
+        padding: 20px 20px 0 15px;
+        font-size: 12px;
+    }
+    .year > #firstletter, .year > #secondletter{
+        font-size: 50px;
+        position: relative;
+        top: 0;
+    }
+    .year > #firstnumber, .year > #secondnumber{
+        font-size: 75px;
+        position: relative;
+        top: 15px;
+    }
+    #exhibit{
+        padding-top: 25px;
+    }
+    #exhibit-title > h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 25px;
+        padding: 25px 0 0 0;
+        color: #34342d;
+    }
+    #exhibit-title > h1::after{
+        content: '';
+        position: absolute;
+        left: 100px;
+        bottom: 0;
+        height: 3px;
+        width: 150px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    #exhibit-description{
+        font-family: 'Poppins', sans-serif;
+        padding: 10px 10px 0 10px;
+        font-size: 12px;
+    }
+    #exhibitExtend{
+        padding-top: 25px;
+    }
+    #exhibitExtend .parallax-first-img{
+        background-image: url("img/Weaving\ Section.jpg");
+    
+        /* Set a specific height */
+        width: 100%;
+        min-height: 450px; 
+      
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    #exhibitExtend .parallax-second-img{
+        margin-top: 0px;
+        background-image: url("img/World\ War\ 2\ Weapons.jpg");
+        /* Set a specific height */
+        width: 100%;
+        height: 300px; 
+      
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    #biography h1{
+        color: #d0ab11;
+        font-size: 25px;
+        font-family: 'EB Garamond', serif;
+    }
+    #biography p{
+        font-size: 12px;
+        font-family: 'Poppins', sans-serif;
+        text-align: justify;
+        border-left: 15px solid #34342d;
+        padding-left: 10px;
+    }
+}
+/*#ABOUT PAGE*/
+
+/*MERCH&SERVICES PAGE*/
+#merchAndServ-header{
+    padding-top: 200px;
+}
+#merchAndServ-header  #row1, #merchAndServ-header #row2{
+    font-size: 125px;
+    font-family: 'EB Garamond', serif;
+    text-transform: uppercase;
+    color: #34342d;
+
+}
+#merchAndServ-header #row2 span{
+    font-size: 75px;
+    vertical-align: super;
+    padding-top: 10px;
+}
+#merchAndServ-header  #row1{
+    margin-left: -300px;
+}
+#merchAndServ-header #row2{
+    margin-top: -50px;
+}
+#merchAndServ-header p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #777;
+}
+#tour{
+    padding-top: 200px;
+}
+#tour h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    padding-bottom: 25px;
+}
+#tour h1::after{
+    content: '';
+    position: absolute;
+    left: 200px;
+    top: 50px;
+    height: 3px;
+    width: 275px;
+    background: #d0ab11;
+    opacity: 0.7;
+}
+#tour h4,#tour h5{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin-left: 15px;
+}
+#tour h5{
+    padding-top: 25px;
+}
+#tour table{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    padding-top: 24px;
+}
+#tour table td{
+    padding-left: 10px;
+    width: 250px;
+}
+#archive{
+    padding-top: 200px;
+}
+#archive img{
+    width: 100%;
+    height: 500px;
+    transform: translateX(-14px);
+    object-fit: cover;
+    mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+#archive .description{
+    margin-top: 250px;
+    margin-left: -250px;
+}
+#archive h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+}
+#archive h1::after{
+    content: '';
+    position: absolute;
+    left: 350px;
+    top: 50px;
+    height: 3px;
+    width: 275px;
+    background: #d0ab11;
+    opacity: 0.7;
+}
+#archive h4, #archive table{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    text-align: right;
+    padding-top: 25px;
+}
+#archive table td{
+    padding-top: 20px;
+    width: 450px;
+}
+#events{
+    padding-top: 200px;
+}
+#events h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    padding-bottom: 25px;
+}
+#events h1::after{
+    content: '';
+    position: absolute;
+    left: 100px;
+    top: 50px;
+    height: 3px;
+    width: 275px;
+    background: #d0ab11;
+    opacity: 0.7;
+}
+#events p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    line-height: 1.4;
+    padding-left: 30px;
+}
+#local{
+    margin-top: 200px;
+    margin-bottom: -400px;
+}
+#local img{
+    width: 100%;
+    height: 75%;
+    object-fit: contain;
+    mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+#local h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    right: 225px;
+}
+#local h1::after{
+    content: '';
+    position: absolute;
+    left: -80px;
+    top: 50px;
+    height: 3px;
+    width: 275px;
+    background: #d0ab11;
+    opacity: 0.7;
+}
+#local .description{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    position: absolute;
+    top: 100px;
+    right: 275px;
+    text-align: right;
+}
+#local h6{
+    position: absolute;
+    bottom: 435px;
+    right: 60px;
+}
+
+/* Large devices (desktops, less than 1200px)*/
+@media (max-width: 1200px) {
+    #merchAndServ-header{
+        padding-top: 150px;
+    }
+    #merchAndServ-header  #row1, #merchAndServ-header #row2{
+        font-size: 100px;
+        font-family: 'EB Garamond', serif;
+        text-transform: uppercase;
+        color: #34342d;
+    
+    }
+    #merchAndServ-header #row2 span{
+        font-size: 50px;
+        vertical-align: super;
+        padding-top: 10px;
+    }
+    #merchAndServ-header  #row1{
+        margin-left: -300px;
+    }
+    #merchAndServ-header #row2{
+        margin-top: -50px;
+    }
+    #merchAndServ-header p{
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        color: #777;
+    }
+    #tour{
+        padding-top: 100px;
+    }
+    #tour h1{
+        font-family: 'Poppins', sans-serif;
+        font-size: 35px;
+        padding-bottom: 25px;
+    }
+    #tour h1::after{
+        content: '';
+        position: absolute;
+        left: 200px;
+        top: 50px;
+        height: 3px;
+        width: 250px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    #tour h4,#tour h5{
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+        margin-left: 15px;
+    }
+    #tour h5{
+        padding-top: 25px;
+    }
+    #tour table{
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+        padding-top: 24px;
+    }
+    #tour table td{
+        padding-left: 10px;
+        width: 250px;
+    }
+    #archive{
+        padding-top: 100px;
+    }
+    #archive img{
+        width: 100%;
+        height: 500px;
+        transform: translateX(-14px);
+        object-fit: cover;
+        mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
+        -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
+    }
+    #archive .description{
+        margin-top: 250px;
+        margin-left: -250px;
+    }
+    #archive h1{
+        font-family: 'Poppins', sans-serif;
+        font-size: 35px;
+    }
+    #archive h1::after{
+        content: '';
+        position: absolute;
+        left: 350px;
+        top: 50px;
+        height: 3px;
+        width: 250px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    #archive h4, #archive table{
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+        text-align: right;
+        padding-top: 25px;
+    }
+    #archive table td{
+        padding-top: 20px;
+        width: 450px;
+    }
+    #events{
+        padding-top: 100px;
+    }
+    #events h1{
+        font-family: 'Poppins', sans-serif;
+        font-size: 35px;
+        padding-bottom: 25px;
+    }
+    #events h1::after{
+        content: '';
+        position: absolute;
+        left: 100px;
+        top: 50px;
+        height: 3px;
+        width: 250px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    #events p{
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+        line-height: 1.4;
+        padding-left: 30px;
+    }
+    #local{
+        margin-top: 100px;
+        margin-bottom: -400px;
+    }
+    #local img{
+        width: 100%;
+        height: 75%;
+        object-fit: contain;
+        mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+        -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+    }
+    #local h1{
+        font-family: 'Poppins', sans-serif;
+        font-size: 35px;
+        position: absolute;
+        top: 0;
+        right: 225px;
+    }
+    #local h1::after{
+        content: '';
+        position: absolute;
+        left: -80px;
+        top: 50px;
+        height: 3px;
+        width: 250px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    #local .description{
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+        position: absolute;
+        top: 100px;
+        right: 275px;
+        text-align: right;
+    }
+    #local h6{
+        position: absolute;
+        bottom: 380px;
+        right: 40px;
+    }
+}
+/* Medium devices (tablets, less than 992px)*/
+@media (max-width: 992px) {
+    #merchAndServ-header{
+        padding-top: 150px;
+    }
+    #merchAndServ-header  #row1, #merchAndServ-header #row2{
+        font-size: 75px;
+        font-family: 'EB Garamond', serif;
+        text-transform: uppercase;
+        color: #34342d;
+    
+    }
+    #merchAndServ-header #row2 span{
+        font-size: 40px;
+        vertical-align: super;
+        padding-top: 10px;
+    }
+    #merchAndServ-header  #row1{
+        margin-left: -250px;
+    }
+    #merchAndServ-header #row2{
+        margin-top: -50px;
+    }
+    #merchAndServ-header p{
+        font-family: 'Poppins', sans-serif;
+        font-size: 13px;
+        color: #777;
+    }
+    #tour{
+        padding-top: 75px;
+    }
+    #tour h1{
+        font-family: 'Poppins', sans-serif;
+        font-size: 30px;
+        padding-bottom: 25px;
+    }
+    #tour h1::after{
+        content: '';
+        position: absolute;
+        left: 175px;
+        top: 50px;
+        height: 3px;
+        width: 225px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    #tour h4,#tour h5{
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        margin-left: 15px;
+    }
+    #tour h5{
+        padding-top: 25px;
+    }
+    #tour table{
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        padding-top: 24px;
+    }
+    #tour table td{
+        padding-left: 12px;
+        width: 250px;
+    }
+    #archive{
+        padding-top: 75px;
+    }
+    #archive img{
+        width: 100%;
+        height: 500px;
+        transform: translateX(-14px);
+        object-fit: cover;
+        mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
+        -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
+    }
+    #archive .description{
+        margin-top: 200px;
+        margin-left: -200px;
+    }
+    #archive h1{
+        font-family: 'Poppins', sans-serif;
+        font-size: 30px;
+    }
+    #archive h1::after{
+        content: '';
+        position: absolute;
+        left: 250px;
+        top: 50px;
+        height: 3px;
+        width: 225px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    #archive h4, #archive table{
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        text-align: right;
+        padding-top: 25px;
+    }
+    #archive table td{
+        padding-top: 18px;
+        width: 450px;
+    }
+    #events{
+        padding-top: 75px;
+    }
+    #events h1{
+        font-family: 'Poppins', sans-serif;
+        font-size: 30px;
+        padding-bottom: 25px;
+    }
+    #events h1::after{
+        content: '';
+        position: absolute;
+        left: 100px;
+        top: 50px;
+        height: 3px;
+        width: 225px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    #events p{
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        line-height: 1.4;
+        padding-left: 30px;
+    }
+    #local{
+        margin-top: 75px;
+        margin-bottom: -300px;
+    }
+    #local img{
+        width: 100%;
+        height: 75%;
+        object-fit: contain;
+        mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+        -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+    }
+    #local h1{
+        font-family: 'Poppins', sans-serif;
+        font-size: 30px;
+        position: absolute;
+        top: 0;
+        right: 225px;
+    }
+    #local h1::after{
+        content: '';
+        position: absolute;
+        left: -100px;
+        top: 50px;
+        height: 3px;
+        width: 225px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    #local .description{
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        position: absolute;
+        top: 80px;
+        right: 275px;
+        text-align: right;
+    }
+    #local h6{
+        position: absolute;
+        bottom: 375px;
+        right: 45px;
+    }
+    #display-title{
+        transform: rotate(-90deg);
+        font-size: 13px;
+        font-family: 'Poppins', sans-serif;
+    }
+}
+/* Small devices (landscape phones, less than 768px)*/
+@media (max-width: 768px) {
+    #merchAndServ-header{
+        padding-top: 125px;
+    }
+    #merchAndServ-header  #row1, #merchAndServ-header #row2{
+        font-size: 60px;
+        font-family: 'EB Garamond', serif;
+        text-transform: uppercase;
+        color: #34342d;
+    
+    }
+    #merchAndServ-header #row2 span{
+        font-size: 30px;
+        vertical-align: super;
+        padding-top: 10px;
+    }
+    #merchAndServ-header  #row1{
+        margin-left: -250px;
+    }
+    #merchAndServ-header #row2{
+        margin-top: -35px;
+    }
+    #merchAndServ-header p{
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        color: #777;
+    }
+    #tour{
+        padding-top: 50px;
+    }
+    #tour h1{
+        font-family: 'Poppins', sans-serif;
+        font-size: 28px;
+        padding-bottom: 25px;
+    }
+    #tour h1::after{
+        content: '';
+        position: absolute;
+        left: 175px;
+        top: 45px;
+        height: 3px;
+        width: 200px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    #tour h4,#tour h5{
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        margin-left: 15px;
+    }
+    #tour h5{
+        padding-top: 25px;
+    }
+    #tour table{
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        padding-top: 24px;
+    }
+    #tour table td{
+        padding-left: 14px;
+        width: 250px;
+    }
+    #archive{
+        padding-top: 50px;
+    }
+    #archive img{
+        width: 100%;
+        height: 400px;
+        transform: translateX(-14px);
+        object-fit: cover;
+        mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
+        -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
+    }
+    #archive .description{
+        margin-top: 100px;
+        margin-left: -100px;
+    }
+    #archive h1{
+        font-family: 'Poppins', sans-serif;
+        font-size: 28px;
+    }
+    #archive h1::after{
+        content: '';
+        position: absolute;
+        left: 250px;
+        top: 45px;
+        height: 3px;
+        width: 200px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    #archive h4, #archive table{
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        text-align: right;
+        padding-top: 25px;
+    }
+    #archive table td{
+        padding-top: 16px;
+        width: 400px;
+    }
+    #events{
+        padding-top: 50px;
+    }
+    #events h1{
+        font-family: 'Poppins', sans-serif;
+        font-size: 28px;
+        padding-bottom: 25px;
+    }
+    #events h1::after{
+        content: '';
+        position: absolute;
+        left: 100px;
+        top: 45px;
+        height: 3px;
+        width: 200px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    #events p{
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        line-height: 1.4;
+        padding-left: 30px;
+    }
+    #local{
+        margin-top: 50px;
+        margin-bottom: -300px;
+    }
+    #local img{
+        width: 100%;
+        height: 75%;
+        object-fit: contain;
+        mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+        -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+    }
+    #local h1{
+        font-family: 'Poppins', sans-serif;
+        font-size: 28px;
+        position: absolute;
+        top: 0;
+        right: 125px;
+    }
+    #local h1::after{
+        content: '';
+        position: absolute;
+        left: -100px;
+        top: 45px;
+        height: 3px;
+        width: 200px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    #local .description{
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        position: absolute;
+        top: 80px;
+        right: 150px;
+        text-align: right;
+    }
+    #local h6{
+        position: absolute;
+        bottom: 300px;
+        right: 25px;
+    }
+    #display-title{
+        transform: rotate(-90deg);
+        font-size: 12px;
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 576px) {
+    #merchAndServ-header  #row1, #merchAndServ-header #row2{
+        font-size: 40px;
+        font-family: 'EB Garamond', serif;
+        text-transform: uppercase;
+        color: #34342d;
+    }
+    #merchAndServ-header #row2 span{
+        font-size: 25px;
+        vertical-align: super;
+        padding-top: 0px;
+    }
+    #merchAndServ-header  #row1{
+        margin-left: -125px;
+    }
+    #merchAndServ-header #row2{
+        margin-top: -25px;
+    }
+    #merchAndServ-header p{
+        font-family: 'Poppins', sans-serif;
+        font-size: 10px;
+        color: #777;
+    }
+    #tour{
+        padding-top: 25px;
+    }
+    #tour h1{
+        font-family: 'Poppins', sans-serif;
+        font-size: 25px;
+        padding-bottom: 10px;
+    }
+    #tour h1::after{
+        content: '';
+        position: absolute;
+        left: 100px;
+        top: 30px;
+        height: 2px;
+        width: 200px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    #archive{
+        padding-top: 25px;
+    }
+    #archive img{
+        width: 100%;
+        height: 300px;
+        transform: translateX(0px);
+        object-fit: cover;
+        mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
+        -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
+    }
+    #archive .description{
+        margin-top: 25px;
+        margin-left: 0px;
+    }
+    #archive h1{
+        font-family: 'Poppins', sans-serif;
+        font-size: 25px;
+    }
+    #archive h1::after{
+        content: '';
+        position: absolute;
+        left: 150px;
+        top: 30px;
+        height: 2px;
+        width: 200px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    #events{
+        padding-top: 25px;
+    }
+    #events h1{
+        font-family: 'Poppins', sans-serif;
+        font-size: 25px;
+        padding-bottom: 25px;
+    }
+    #events h1::after{
+        content: '';
+        position: absolute;
+        left: 50px;
+        top: 30px;
+        height: 2px;
+        width: 200px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    #events p{
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        line-height: 1.4;
+        padding-left: 30px;
+    }
+    #local{
+        padding-top: 25px;
+        margin-bottom: 0px;
+    }
+    #local img{
+        width: 100%;
+        height: 75%;
+        object-fit: contain;
+        mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+        -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+    }
+    #local h1{
+        font-family: 'Poppins', sans-serif;
+        font-size: 25px;
+        position: absolute;
+        top: 0;
+        right: 10px;
+    }
+    #local h1::after{
+        content: '';
+        position: absolute;
+        left: -100px;
+        top: 30px;
+        height: 2px;
+        width: 200px;
+        background: #d0ab11;
+        opacity: 0.7;
+    }
+    #local .description{
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        text-align: right;
+    }
+    #local h6{
+        transform: rotate(0deg);
+        position: relative;
+        bottom: 0;
+        left: 40px;
+    }
+}
+/*#MERCH&SERVICES PAGE*/
+
+
